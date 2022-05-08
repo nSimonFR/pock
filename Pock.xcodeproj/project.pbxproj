@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3400F92D264EBBC8003B2B4C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3400F92C264EBBC8003B2B4C /* Media.xcassets */; };
-		340D5BA326861A67001D73F8 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 340D5BA226861A67001D73F8 /* Secrets.plist */; };
 		340D5BA92687038C001D73F8 /* DebugConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340D5BA72687038C001D73F8 /* DebugConsoleViewController.swift */; };
 		340D5BAA2687038C001D73F8 /* DebugConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340D5BA82687038C001D73F8 /* DebugConsoleViewController.xib */; };
 		340D5BAF2687A474001D73F8 /* NSFilterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340D5BAE2687A474001D73F8 /* NSFilterTextField.swift */; };
@@ -70,6 +69,7 @@
 		34E7B98B263C65590072FE54 /* WidgetsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7B989263C65590072FE54 /* WidgetsManagerViewController.swift */; };
 		34E7B98C263C65590072FE54 /* WidgetsManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E7B98A263C65590072FE54 /* WidgetsManagerViewController.xib */; };
 		80F6ED9E941CB99A898BECF2 /* Pods_Pock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE9B256A4CB4701408B60C0 /* Pods_Pock.framework */; };
+		93C8776928271C5900B89D19 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93C8776828271C5900B89D19 /* PockKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C8776928271C5900B89D19 /* PockKit in Frameworks */,
 				34564DFA25F83ECB0093E5E0 /* DFRFoundation.framework in Frameworks */,
 				80F6ED9E941CB99A898BECF2 /* Pods_Pock.framework in Frameworks */,
 			);
@@ -672,6 +673,9 @@
 				34E78F5A264EB0FD001CBA4E /* PBXTargetDependency */,
 			);
 			name = Pock;
+			packageProductDependencies = (
+				93C8776828271C5900B89D19 /* PockKit */,
+			);
 			productName = Pock;
 			productReference = 34564DB825F81E520093E5E0 /* Pock.app */;
 			productType = "com.apple.product-type.application";
@@ -700,7 +704,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					344C9A14260672F4009AA07C = {
 						CreatedOnToolsVersion = 12.5;
@@ -725,6 +729,10 @@
 				"pt-PT",
 			);
 			mainGroup = 34564DAF25F81E520093E5E0;
+			packageReferences = (
+				93C8776728271C5900B89D19 /* XCRemoteSwiftPackageReference "pockkit" */,
+				935483712827D5880091EC27 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 34564DB925F81E520093E5E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -743,7 +751,6 @@
 			files = (
 				344C9A1E260674E5009AA07C /* Relaunch in Resources */,
 				34291B69263EDF9800768B08 /* PreferencesViewController.xib in Resources */,
-				340D5BA326861A67001D73F8 /* Secrets.plist in Resources */,
 				34564DBE25F81E590093E5E0 /* Assets.xcassets in Resources */,
 				34564DD925F826340093E5E0 /* NSMenuItemCustomView.xib in Resources */,
 				34A1A4AD25FBDAA20086500F /* Localisations.strings in Resources */,
@@ -953,9 +960,9 @@
 		344C9A19260672F4009AA07C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 788D9WZ9Z3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pigigaldi.pock.relaunch;
@@ -969,9 +976,9 @@
 		344C9A1A260672F4009AA07C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 788D9WZ9Z3;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pigigaldi.pock.relaunch;
@@ -986,6 +993,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1047,6 +1055,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1106,7 +1115,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pock/Bundle/Pock.entitlements;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = "";
@@ -1139,7 +1148,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pock/Bundle/Pock.entitlements;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = "";
@@ -1168,7 +1177,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QLPockWidget/QLPockWidget.entitlements;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1192,7 +1201,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QLPockWidget/QLPockWidget.entitlements;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1251,6 +1260,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		935483712827D5880091EC27 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+		93C8776728271C5900B89D19 /* XCRemoteSwiftPackageReference "pockkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pock/pockkit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93C8776828271C5900B89D19 /* PockKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93C8776728271C5900B89D19 /* XCRemoteSwiftPackageReference "pockkit" */;
+			productName = PockKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34564DB025F81E520093E5E0 /* Project object */;
 }
