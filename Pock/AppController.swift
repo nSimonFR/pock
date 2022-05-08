@@ -55,7 +55,7 @@ internal class AppController: NSResponder {
 		}
 		TouchBarHelper.swizzleFunctions()
 		registerForInternalNotifications()
-		registerDoubleControlHotKey()
+//		registerDoubleControlHotKey()
 		prepareOnceADayTimer()
 		clearTemporaryWidgetsFolder()
         startListeningForScreenLockNotifications()
